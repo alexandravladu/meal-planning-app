@@ -1,0 +1,19 @@
+{
+  "name": "meal-planning-app",
+  "version": "1.0.0",
+  "description": "A group project focused on creating a meal planning app using spoonacular API.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandravladu/meal-planning-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandravladu/meal-planning-app/issues"
+  },
+  "homepage": "https://github.com/alexandravladu/meal-planning-app#readme"
+}
