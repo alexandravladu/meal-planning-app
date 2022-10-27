@@ -1,0 +1,1 @@
+https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=b2d0a2fd5e6c48b1a41fef1086ed3a7d&includeNutrition=false
