@@ -23,7 +23,10 @@ input.classList.add("block")
 // img2.src = "https://picsum.photos/202/300"
 // img3.src = "https://picsum.photos/203/300"
 
+userSpaced = false
+
 let string = ""
+let string2 = ""
 
 // mainSection.append(img1, img2, img3)
 
@@ -32,9 +35,22 @@ input.addEventListener("input", (enteredText) => {
         string = string.slice(0, -1)
     }else if(enteredText.inputType == "deleteSoftLineBackward") {
         string = ""
-    } else {
+    } else if (userSpaced == false) {
         string += enteredText.data
     }
+
+    if (enteredText.data == " ")  {
+        userSpaced = true
+    }
+    if (enteredText.inputType == "deleteContentBackward") {
+        string2 = string2.slice(0, -1)
+    }else if(enteredText.inputType == "deleteSoftLineBackward") {
+        string2 = ""
+    } else if (userSpaced === true) {
+        string2 += enteredText.data
+    }
+    console.log(string, string2, userSpaced)
+    //Make it not add to string2 when you have erased everything
     // if (mainSection.getElementById("#image-1") && mainSection.getElementById("#image-2") && mainSection.getElementById("image-3")) {
 
     // } else {
@@ -81,7 +97,7 @@ button.addEventListener("click", () => {
             
         })
     }
-    returnAll(string, "chinese")
+    returnAll(string, "italian")
 })
 
 
