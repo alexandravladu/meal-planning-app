@@ -19,6 +19,8 @@ body {
     font-size: 1.05 rem;
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+   
     /* background: #5c746a; */
     /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAU0lEQVQoU2P8eUjvPwMDA8MLw10gCidgJFrhw88vwCYig5DbS8HcNarRcGFGihRicyhj8ObTYKv7HGTxe4ZohdjcuEUsC2y6z6tp+D1DtEJsjgUAy/UzWeLdm1gAAAAASUVORK5CYII=) repeat; */
 }
@@ -35,20 +37,25 @@ body {
 }
 
 .title {
-    font-size: 2rem;
+
     margin-bottom: 1rem;
+    text-align: center;
+    
+    font-size: 3rem;
+        color: #9c426a  ;
+        text-shadow: 3px 0 rgba(48, 123, 176, 0.529);
 }
 
-.container {
+/* .container {
     max-height: 100vh;
-}
+} */
 
-.meal-wrapper {
+/* .meal-wrapper {
     max-width: 100vh;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-}
+} */
 
 .meal-search{
     margin: 2rem 0;
@@ -60,10 +67,10 @@ body {
     /* align-items: stretch; */
 }
 
-.search-control,
+/* .search-control,
 .search-btn {
-    width: 90%;
-}
+    width: 100%;
+} */
 
 .search-control{
     padding: 0 1rem;
@@ -72,15 +79,47 @@ body {
     outline: 0;
     border: 1px solid var(--light-red);
     color: var(--light-red);
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-radius: 2rem;
+    width: fit-content;
+    margin-left:39%;
+    margin-top: 2rem auto;
 }
 
 .search-control::placeholder{
     color: var(--light-red);
 }
 
+.github{
+    display: flex;
+    justify-content: center;
+}
+.section{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows : 300px 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 10%;
+}
 
+.meal-img {
+    height: 270px;
+    /* background-size: cover;
+    background-position: center; */
+}
+
+.img-style{
+    
+        width: 50%;
+        height: 90%;
+        object-fit: cover;
+        object-position: center;
+        margin-left: 25%;
+        margin-top:5%;
+        border-radius: 25px;
+    
+}
  .search-btn{
     width: 30px;
     height: 30px;
@@ -97,6 +136,9 @@ body {
 
 .title-meal{
     margin-top: 4rem;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .meal{
@@ -106,16 +148,22 @@ body {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: inset -5px -5px 15px #ffff,
-        inset 5px 5px 15px rgba(0,0,0, .20);
+        inset 5px 5px 15px rgba(0,0,0, .50);
     transform-origin: 65% 75%;
     transition: transform 1s, filter .5s ease-out;
     margin: 2rem 0;
+    opacity: 0.95;
 }
 #logo {
     display:block;
     width: 200px;
 }
 
+p{
+    text-align: center;
+    margin: 3rem;
+    font-family: inherit;
+}
 
   .macros{
     padding-bottom: 3%;
@@ -126,20 +174,42 @@ body {
 
   }
   
+  .footer-text{
+    font-size: 20px;
+    color: #9c426a  ;
+    text-shadow: 1px 0 rgba(48, 123, 176, 0.529);
+  }
   .recipe-btn {
     text-decoration: none;
     color: white;
     background-color: var(--light-red);
     font-weight: 500;
     font-size: 1.1rem;
-    padding: 0.75rem 0;
+    /* padding: 0.75rem 0; */
     display: block;
     width: 175px;
-    margin: 1rem auto;
+    margin: 2rem auto;
     border-radius: 2rem;
     transition: all 0.4s linear;
+    background-image: linear-gradient(0deg, #3f5efb, #fc466b);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
   }
 
+  .footer {
+    text-align: center;
+
+}
+
+footer .github a {
+    font-size: 30px;
+    margin: 0 20px;
+    margin-bottom: 1.5rem;
+}
+footer .github a:hover {
+    transition: all 100ms ease-in-out;
+    animation: fa-spin 7s linear 0s infinite normal none;
+}
+ 
   /* .recipe-btn {
     font-size: 16px;
     font-weight: 200;
