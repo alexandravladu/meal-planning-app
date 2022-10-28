@@ -25,32 +25,56 @@ input.classList.add("block")
 
 userSpaced = false
 
-let string = ""
+let string1 = ""
 let string2 = ""
 
 // mainSection.append(img1, img2, img3)
 
 input.addEventListener("input", (enteredText) => {
-    if (enteredText.inputType == "deleteContentBackward") {
-        string = string.slice(0, -1)
-    }else if(enteredText.inputType == "deleteSoftLineBackward") {
-        string = ""
-    } else if (userSpaced == false) {
-        string += enteredText.data
-    }
-
+    
     if (enteredText.data == " ")  {
         userSpaced = true
+    } 
+    if (enteredText.inputType == "deleteContentBackward" && userSpaced == false) {
+        string1 = string1.slice(0, -1)
+    }else if(enteredText.inputType == "deleteSoftLineBackward" && userSpaced == false) {
+        string1 = ""
+    } else if (userSpaced == false) {
+        string1 += enteredText.data
     }
+    
+
     if (enteredText.inputType == "deleteContentBackward") {
         string2 = string2.slice(0, -1)
     }else if(enteredText.inputType == "deleteSoftLineBackward") {
         string2 = ""
     } else if (userSpaced === true) {
         string2 += enteredText.data
+    
     }
-    console.log(string, string2, userSpaced)
-    //Make it not add to string2 when you have erased everything
+
+    
+
+    if(string2.indexOf(" ") == 0) {
+        
+        userSpaced = true;
+        console.log("There is a space")
+    } else {
+        userSpaced = false;
+        console.log("There is not a space")
+    }
+
+   console.log(string2.indexOf(" "));
+
+    console.log(string1)
+    console.log("-----")
+    console.log(string2)
+    
+
+
+
+    
+    //Make it not add to string when you have erased everything
     // if (mainSection.getElementById("#image-1") && mainSection.getElementById("#image-2") && mainSection.getElementById("image-3")) {
 
     // } else {
@@ -97,7 +121,7 @@ button.addEventListener("click", () => {
             
         })
     }
-    returnAll(string, "italian")
+    returnAll(string1, string2)
 })
 
 
